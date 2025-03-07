@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibiana - Página Personal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos generales */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            overflow-x: hidden;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            text-align: center;
+        }
+
+        /* Imagen de fondo (desenfoque) */
+        .background-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('12.jpg'); /* Coloca aquí tu imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            filter: blur(8px); /* Desenfoque de la imagen */
+            z-index: -1;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        /* Estilo del encabezado */
+        header {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #333;
+            padding: 40px 20px;
+            border-radius: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #ddd;
+            margin-top: 20px;
+        }
+
+        header h1 {
+            font-size: 40px;
+            margin-top: 15px;
+            font-weight: 600;
+        }
+
+        /* Secciones */
+        section {
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 32px;
+            font-weight: 600;
+            color: #444;
+            margin-bottom: 30px;
+        }
+
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Tarjetas más grandes */
+            gap: 40px;
+            justify-items: center;
+        }
+
+        /* Estilo de las tarjetas */
+        .card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            border: 1px solid #eee;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .card li {
+            margin: 15px 0;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .card h3 {
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+
+        /* Contenedor del video */
+        .video-container {
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .video-container a {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .video-container a:hover {
+            background-color: #45a049;
+        }
+
+        /* Estilo del pie de página */
+        footer {
+            background-color: rgba(241, 241, 241, 0.9);
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            font-size: 16px;
+        }
+
+        @media screen and (max-width: 768px) {
+            header h1 {
+                font-size: 32px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .card h3 {
+                font-size: 22px;
+            }
+
+            .video-container a {
+                font-size: 16px;
+                padding: 12px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-image"></div> <!-- Imagen de fondo borroso -->
+    
+    <div class="content">
+        <header>
+            <h1>Bibiana Pérez</h1>
+            <!-- Imagen de perfil -->
+            <img src="foto.jpg" alt="Foto de Bibiana">
+        </header>
+
+        <div class="container">
+            <!-- Sección de Resumen Biográfico -->
+            <section>
+                <h2 class="section-title">Resumen Biográfico</h2>
+                <div class="content-wrapper">
+                    <div class="card">
+                        <p>¡Hola! Soy Bibiana, una apasionada de la creatividad  y la arquitectura. En mi tiempo libre disfruto de la música, el café y la buena cocina. Mi objetivo es seguir creciendo profesionalmente y aprendiendo cada día más sobre las últimas tendencias en el diseño y la tecnología.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección de Géneros Musicales Favoritos -->
+            <section>
+                <h2 class="section-title">Géneros Musicales Favoritos</h2>
+                <div class="content-wrapper">
+                    <div class="card">
+                        <h3>Música</h3>
+                        <ul>
+                            <li>Pop</li>
+                            <li>Rock</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección de Películas Favoritas -->
+            <section>
+                <h2 class="section-title">Películas Favoritas</h2>
+                <div class="content-wrapper">
+                    <div class="card">
+                        <h3>Películas</h3>
+                        <ul>
+                            <li>Shrek</li>
+                            <li>The Matrix</li>
+                            <li>Interstellar</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección de Hobbies Favoritos -->
+            <section>
+                <h2 class="section-title">Hobbies Favoritos</h2>
+                <div class="content-wrapper">
+                    <div class="card">
+                        <h3>Hobbies</h3>
+                        <ul>
+                            <li>Ver podcast de Asesinatos</li>
+                            <li>Aprender nuevos programas de Modelado BIM</li>
+                            <li>Compartir un buen café</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección del Video de YouTube -->
+            <section class="video-container">
+                <h2 class="section-title">¿Cómo me visualizo en 5 años?</h2>
+                <p>He subido un video a YouTube donde comparto mis metas personales y profesionales para el futuro. ¡Míralo aquí!</p>
+                <a href="https://youtu.be/sxJI95XjYuQ" target="_blank">Ver Video</a>
+            </section>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Bibiana. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+</body>
+</html>
+
